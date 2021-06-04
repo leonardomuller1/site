@@ -1,0 +1,87 @@
+.sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sobre .titulo {
+  width: 100%;
+  text-align: center;
+}
+
+.sobre div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre div img {
+  height: 250px;
+  margin-right: 20px;
+}
+
+/* Conhecimentos */
+.conhecimentos-titulo {
+  margin: 15px 0;
+}
+
+.conhecimentos-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px;
+}
+
+.conhecimentos-div div {
+  height: 230px;
+  width: 300px;
+  background: #DFE0E5;
+  border-radius: 40px;
+  margin: 10px;
+}
+
+.conhecimentos-div div i {
+  font-size: 1.5em;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.conhecimentos-div div h3, .conhecimentos-div div h4 {
+  color: #30bdf2;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.2em;
+}
+.conhecimentos-div div h4{
+    color: #2D47B2;
+}
+
+.conhecimentos-div div p {
+  font-size: 1em;
+  width: 180px;
+  color: #332f2a;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* funcionamento */
+
+@media (max-width: 700px) {
+  .sobre div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sobre div .paragrafo {
+    width: 80%;
+  }
+
+  .conhecimentos-div {
+    flex-direction: column;
+  }
+}

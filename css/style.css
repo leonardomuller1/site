@@ -1,0 +1,257 @@
+/* GERAL */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  height: 100vh;
+  background: #f6f6f6;
+}
+
+.btn {
+  width: 150px;
+  height: 55px;
+  flex-grow: 0;
+  border-radius: 5px;
+  background-color: #0fa0d7;
+  transition: background-color 1s ease 0s;
+  box-shadow: 4px 4px 4px rgba(116, 141, 242, 0.2);
+  border: none;
+  margin: 0 auto;
+}
+
+.btn a {
+  font-size: 1em;
+  text-align: center;
+  color: #181d1f;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transition: ease 0.8s;
+  background-color: #30bdf2;
+}
+
+.titulo {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+  color: #152d8c;
+}
+
+.subtitulo {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  color: #152d8c;
+}
+
+.paragrafo {
+  max-width: 600px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  color: #444444;
+  margin: 0 auto;
+}
+.p-branco {
+  color: #f9f9f9;
+}
+.p-preto {
+  color: #000;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* NavBar*/
+
+.nav {
+  width: 100%;
+  height: 70px;
+  background-color: #181d1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  justify-content: space-around;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav ul li a {
+  font-size: 0.8em;
+  color: #f9f9f9;
+  text-decoration: none;
+  margin: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav ul li a:hover,
+.nav .ativo {
+  color: #30bdf2;
+  transition: ease 0.3s;
+}
+
+/* Inicio */
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 320px;
+  background: rgb(123, 132, 135);
+  background: linear-gradient(
+    51deg,
+    rgba(123, 132, 135, 1) 0%,
+    rgba(119, 136, 136, 0.6755077030812324) 54%
+  );
+  margin-bottom: 15px;
+}
+
+.inicio .principal {
+  margin: 40px 0 15px 0;
+  font-size: 3rem;
+}
+
+.inicio .btn {
+  margin-top: 20px;
+}
+
+/* footer */
+
+.footer {
+  margin-top: 15px;
+  height: 100px;
+  background: #181d1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer div .btn {
+  width: 170px;
+  margin: 10px 0;
+}
+.footer div span {
+  display: none;
+}
+.footer  .logos-footer {
+  width: 20px;
+  height: 20px;
+  margin: 0 20px;
+}
+.footer .logos-footer:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+
+@media (max-width: 1000px) {
+  /* nav */
+  .nav ul li a:hover,
+  .nav .ativo {
+    padding: 10px;
+    transition: ease 0.3s;
+  }
+  .inicio {
+    min-height: 380px;
+    max-height: 380px;
+  }
+  .inicio .paragrafo {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  .inicio .titulo {
+    font-size: 1.5rem;
+  }
+  /* footer */
+  .footer {
+    height: 150px;
+  }
+  .footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer div .btn {
+    width: 150px;
+    margin: 10px auto;
+  }  
+  .footer div a i:hover {
+    transition: ease 0.3s;
+  }
+}
+
+/* menu mobile */
+
+.js [data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .js [data-menu="button"] {
+    display: block;
+    background-color: #181d1f;
+    border: none;
+    width: 10%;
+    height: 50%;
+    font-size: 0.9em;
+    letter-spacing: 0.1rem;
+    color: #0fa0d7;
+  }
+  .js [data-menu="button"]::before {
+    margin: 4px auto;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 22px;
+    background: #0fa0d7;
+    box-shadow: 0 8px #0fa0d7, 0 -8px #0fa0d7;
+    transition: transform 0.3s;
+    border: none;
+  }
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+  .js [data-menu="list"] {
+    border: none;
+    display: none;
+    position: absolute;
+    background: #2f3537;
+    width: 100%;
+    z-index: 200;
+    top: 70px;
+    padding: 20px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  .js [data-menu="list"] li {
+    margin: 0px 10vh;
+    border: none;
+  }
+  [data-menu="list"].active {
+    display: block;
+    animation: show-right 0.3s forwards;
+    border: none;
+  }
+  .dropdown-menu {
+    position: static;
+    border: none;
+  }
+}

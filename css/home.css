@@ -1,0 +1,59 @@
+/* sobre */
+.sobre {
+  display: flex;
+  flex-direction: column;
+  max-height: 350px;
+  min-height: 250px;
+  height: 100%;
+  align-items: center;
+  margin: auto 0;
+}
+.sobre .titulo {
+  margin-top: 30px;
+}
+.sobre .btn {
+  margin: 5px 0 15px 0;
+}
+
+/* Serviços */
+.servico {
+  min-height: 400px;
+}
+.servico .titulo {
+  width: 100%;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.servico .container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 3px;
+  border-radius: 30px;
+}
+.servico .container img {
+  height: 175px;
+  margin-right: 5%;
+}
+.servico .container .btn {
+  margin-top: 15px;
+}
+.servico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.servico .btn {
+  margin: 10px 0;
+}
+
+@media (max-width: 1000px) {
+  .sobre {
+    flex-direction: column;
+    height: 55vh;
+  }
+}

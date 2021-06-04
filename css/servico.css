@@ -1,0 +1,144 @@
+.modelos .container div img,
+.beneficios .container div img,
+.funcionalidade .container div img,
+.funcionamento .container div img {
+  height: 80px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #181d1f;
+}
+
+.modelos .container div img:hover,
+.beneficios .container div img:hover {
+  transform: translate(0px, -5px);
+  transition: ease 1s;
+}
+
+.modelos .container div,
+.beneficios .container div,
+.funcionalidade .container div,
+.funcionamento .container div {
+  width: 25%;
+  height: 45%;
+  padding: 2% 2%;
+  margin: 30px 24px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 0 rgba(46, 47, 51, 0.267);
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-around;
+}
+.funcionalidade .container div,
+.funcionamento .container div {
+  background: none;
+  box-shadow: none;
+}
+/* modelos */
+.modelos .container div {
+  width: 65%;
+  max-width: 450px;
+}
+.modelos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.modelos .container div ul li{
+  margin-bottom: 5px;
+  text-align: center;
+}
+/* Benefiicios */
+.beneficios .titulo {
+  margin: 10px auto;
+}
+
+/* funcionalidades */
+.funcionalidade,
+.funcionamento {
+  height: 400%;
+  max-height: 290px;
+  background: rgb(221, 238, 238);
+  background: linear-gradient(
+    257deg,
+    rgba(221, 238, 238, 1) 0%,
+    rgba(223, 224, 229, 1) 70%
+  );
+}
+
+.funcionalidade .titulo,
+.funcionamento .titulo {
+  padding-top: 30px;
+}
+
+/* acoordion */
+.faq {
+  margin-top: 50px;
+  height: auto;
+  padding: 10px;
+}
+
+.faq dt {
+  color: #0fa0d7;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.faq dd.paragrafo {
+  font-size: 1em;
+  color: #332f2a;
+  text-align: center;
+  width: 80%;
+  margin: 15px auto;
+}
+
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../svgs/angle-down-solid.svg") no-repeat center center;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../svgs/angle-down-solid.svg") no-repeat center center;
+  transform: rotate(270deg);
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+[data-anime="accordion"] dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+/* mobile */
+@media (max-width: 1000px) {
+  .beneficios .container div,
+  .funcionalidade .container div,
+  .funcionamento .container div {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .funcionalidade,
+  .funcionamento {
+    max-height: 650px;
+    height: 300%;
+  }
+}
